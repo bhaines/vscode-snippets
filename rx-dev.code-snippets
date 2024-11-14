@@ -16,14 +16,24 @@
 	// 	"description": "Log output to console"
 	// }
 
-	"console_log_object": {
+	"console_log_object_javascript": {
+		"scope": "javascript",
 		"prefix": "clo",
 		"body": [
 			"console.log(\"${1:string}: \" + JSON.stringify(${1:string}, null, 4));"
 		],
 		"description": "Console Log Object"
 	},
+	"console_log_object_php": {
+		"scope": "php",
+		"prefix": "clo",
+		"body": [
+			"echo(\"${1:string}: \" . json_encode($${1:string}, JSON_PRETTY_PRINT));"
+		],
+		"description": "Console Log Object"
+	},
 	"console_log_value": {
+		"scope": "javascript",
 		"prefix": "clv",
 		"body": [
 			"console.log(\"${1:string}: \" + ${1:string});"
@@ -31,6 +41,7 @@
 		"description": "Console Log Value"
 	},
 	"console_log": {
+		"scope": "javascript",
 		"prefix": "cl",
 		"body": [
 			"console.log(\"${1}\");"
